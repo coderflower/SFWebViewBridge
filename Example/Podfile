@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SFWebViewBridge_Example' do
+  pod 'SFWebViewBridge', :path => '../'
+
+  target 'SFWebViewBridge_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
