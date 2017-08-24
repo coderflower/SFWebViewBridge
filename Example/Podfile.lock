@@ -1,0 +1,16 @@
+PODS:
+  - SFWebViewBridge (0.1.0)
+
+DEPENDENCIES:
+  - SFWebViewBridge (from `../`)
+
+EXTERNAL SOURCES:
+  SFWebViewBridge:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SFWebViewBridge: 7cb5c365921045dda3a2aadad01eec87a170e752
+
+PODFILE CHECKSUM: 9067ff3e23bf55bd5aa801dc88fd1faf368acb66
+
+COCOAPODS: 1.2.1

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JS与OC交互</title>
+    
+    <!--  定义js函数  -->
+    <script type="text/javascript">
+    function test1(){
+        alert("我是被OC调用的js方法")
+    };
+    function test2(data){
+        alert(data)
+    };
+    function test3(){
+        
+        alert("调用原生")
+        
+        var json = '{ "name": "cxh", "sex": "man" }';
+        
+        var str2 = { "name": "cxh", "sex": "man" };
+        
+        this.printHelloWorld(str2)
+    };
+    
+    </script>
+    <style type="text/css">
+        
+    </style>
+</head>
+<body>
+    <br /><br /><br /><br />
+    
+    <!-- 创建一个按钮，点击就调用  printHelloWorld()  方法 -->
+    <button onclick='printHelloWorld()'>调用不带参数 OC 方法</button>
+    <br />
+    <br />
+    <button onclick='printHelloWorld({ "name": "Caiflower", "sex": "man" })'>调用带参数 OC 方法</button>
+    <br />
+    <br />
+    <button onclick='javaScriptBridgeToOC({ "requestCode": "0", "sex": "man" })'>跳转新页面</button>
+    <br />
+    <br />
+    <button onclick='javaScriptBridgeToOC({ "requestCode": "1", "sex": "man" })'>返回上一级页面</button>
+    <br />
+    <br />
+    <button onclick='javaScriptBridgeToOC({ "requestCode": "2", "sex": "man" })'>调用其他功能</button>
+</body>
+</html>

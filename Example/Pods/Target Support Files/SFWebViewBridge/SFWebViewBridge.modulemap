@@ -1,0 +1,6 @@
+framework module SFWebViewBridge {
+  umbrella header "SFWebViewBridge-umbrella.h"
+
+  export *
+  module * { export * }
+}

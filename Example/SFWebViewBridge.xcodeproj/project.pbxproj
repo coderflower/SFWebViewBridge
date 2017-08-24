@@ -23,6 +23,8 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		B805FF6C1F4E707400A3F163 /* SFModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B805FF6B1F4E707400A3F163 /* SFModel.m */; };
+		B805FF6F1F4E824400A3F163 /* local.html in Resources */ = {isa = PBXBuildFile; fileRef = B805FF6E1F4E824400A3F163 /* local.html */; };
 		E168D97CB1ACB9CFEA3C6410 /* Pods_SFWebViewBridge_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E47379768B116946A6B86FE9 /* Pods_SFWebViewBridge_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +42,7 @@
 		0B9803A83CAA373F6028081E /* Pods-SFWebViewBridge_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFWebViewBridge_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SFWebViewBridge_Example/Pods-SFWebViewBridge_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		19589B6D0D770FFBD8E63E74 /* Pods-SFWebViewBridge_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFWebViewBridge_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SFWebViewBridge_Example/Pods-SFWebViewBridge_Example.release.xcconfig"; sourceTree = "<group>"; };
 		2127466313F29498F037FF60 /* Pods-SFWebViewBridge_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFWebViewBridge_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SFWebViewBridge_Tests/Pods-SFWebViewBridge_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		3F5248C5E6496C5AC5C37EB7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		3F5248C5E6496C5AC5C37EB7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		445CC779930E7FF7D629D254 /* Pods_SFWebViewBridge_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SFWebViewBridge_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58A195388D20070C39A /* SFWebViewBridge_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFWebViewBridge_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -62,9 +64,12 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8308979A831F575D5332C8D5 /* SFWebViewBridge.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SFWebViewBridge.podspec; path = ../SFWebViewBridge.podspec; sourceTree = "<group>"; };
+		8308979A831F575D5332C8D5 /* SFWebViewBridge.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SFWebViewBridge.podspec; path = ../SFWebViewBridge.podspec; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8C87CAFEEDB50EAFD8166778 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		8C87CAFEEDB50EAFD8166778 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		B805FF6A1F4E707400A3F163 /* SFModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFModel.h; sourceTree = "<group>"; };
+		B805FF6B1F4E707400A3F163 /* SFModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFModel.m; sourceTree = "<group>"; };
+		B805FF6E1F4E824400A3F163 /* local.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = local.html; sourceTree = "<group>"; };
 		DBBAD90E2F013ACE409A4929 /* Pods-SFWebViewBridge_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SFWebViewBridge_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SFWebViewBridge_Tests/Pods-SFWebViewBridge_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E47379768B116946A6B86FE9 /* Pods_SFWebViewBridge_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SFWebViewBridge_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -132,9 +137,12 @@
 		6003F593195388D20070C39A /* Example for SFWebViewBridge */ = {
 			isa = PBXGroup;
 			children = (
+				B805FF6D1F4E824400A3F163 /* Resource */,
 				6003F59C195388D20070C39A /* SFAppDelegate.h */,
 				6003F59D195388D20070C39A /* SFAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				B805FF6A1F4E707400A3F163 /* SFModel.h */,
+				B805FF6B1F4E707400A3F163 /* SFModel.m */,
 				6003F5A5195388D20070C39A /* SFViewController.h */,
 				6003F5A6195388D20070C39A /* SFViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
@@ -183,6 +191,14 @@
 				3F5248C5E6496C5AC5C37EB7 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		B805FF6D1F4E824400A3F163 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B805FF6E1F4E824400A3F163 /* local.html */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		CBF1B139AC533719AF245E2D /* Pods */ = {
@@ -282,6 +298,7 @@
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				B805FF6F1F4E824400A3F163 /* local.html in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +414,7 @@
 				6003F59E195388D20070C39A /* SFAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* SFViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				B805FF6C1F4E707400A3F163 /* SFModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
