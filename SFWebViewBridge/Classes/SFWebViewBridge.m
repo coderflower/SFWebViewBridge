@@ -8,10 +8,9 @@
 
 #import "SFWebViewBridge.h"
 #import <JavaScriptCore/JavaScriptCore.h>
-
 @interface SFWebViewBridge ()<UIWebViewDelegate>
+@property (nonatomic, weak) id<UIWebViewDelegate> delegate;
 @property (nonatomic, strong) JSContext * context;
-@property (nonatomic, strong) UIWebView * webView;
 @property (nonatomic, strong) NSMutableDictionary * messageHandlers;
 @end
 @implementation SFWebViewBridge
@@ -19,7 +18,6 @@
 {
     SFWebViewBridge * bridge = [[SFWebViewBridge alloc] init];
     webView.delegate = bridge;
-    bridge.webView = webView;
     bridge.delegate = delegate;
     return bridge;
 }
@@ -34,9 +32,18 @@
 {
     if (parameter != nil)
     {
-        NSBundle *mainB = [NSBundle bundleForClass:[parameter class]];
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunused-variable"
         // 参数类型不能为自定义类型
+        NSBundle *mainB = [NSBundle bundleForClass:[parameter class]];
         NSAssert(mainB != [NSBundle mainBundle], @"请使用合法的参数类型");
+#pragma clang diagnostic pop
+        return;
+    }
+    else
+    {
+        // 执行 JS
+        [self.context evaluateScript:[NSString stringWithFormat:@"%@()",handlerName]];
         return;
     }
     
@@ -98,12 +105,13 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
+    // 获取 JSContext并赋值
     _context = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
     
-    __weak typeof(self) weakself = self;
-    // 添加所有注册的handel
+    // 添加所有注册的handler
     if (self.messageHandlers.count != 0)
     {
+        __weak typeof(self) weakself = self;
         [self.messageHandlers enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
             weakself.context[key] = obj;
         }];

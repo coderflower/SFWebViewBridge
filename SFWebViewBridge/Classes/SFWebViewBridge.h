@@ -7,16 +7,30 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@class SFWebViewBridge;
-@protocol SFWebViewBridgeDelegate <UIWebViewDelegate>
-
-@end
-
 @interface SFWebViewBridge : NSObject
-@property (nonatomic, weak) id<SFWebViewBridgeDelegate> delegate;
-+ (instancetype)bridgeWithWebView:(UIWebView *)webView delegate:(id)delegate;
+
+/**
+ 快速创建桥
+
+ @param webView 需要建立桥接的 webView
+ @param delegate 桥接代理一般为webView所属控制器
+ @return bridge
+ */
++ (instancetype)bridgeWithWebView:(UIWebView *)webView delegate:(id<UIWebViewDelegate>)delegate;
+
+/**
+ 调用不带参数的 JS 方法
+
+ @param handlerName 方法名
+ */
 - (void)callHandler:(NSString*)handlerName;
+
+/**
+ 调用带参数的 JS 方法
+
+ @param handlerName 方法名
+ @param parameter 参数,建议使用 NSDictionary类型
+ */
 - (void)callHandler:(NSString*)handlerName parameter:(id)parameter;
 
 /**

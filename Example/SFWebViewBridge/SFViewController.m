@@ -7,9 +7,9 @@
 //
 
 #import "SFViewController.h"
-#import "SFWebViewBridge.h"
+#import <SFWebViewBridge/SFWebViewBridge.h>
 #import "SFModel.h"
-@interface SFViewController ()<SFWebViewBridgeDelegate>
+@interface SFViewController ()<UIWebViewDelegate>
 @property (nonatomic, strong) UIWebView * webView;
 @property (nonatomic, strong) SFWebViewBridge * bridge;
 @end
@@ -23,6 +23,9 @@
     
      NSString *path = [[NSBundle mainBundle] pathForResource:@"local.html" ofType:nil];
     path = [path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    _bridge = [SFWebViewBridge bridgeWithWebView:self.webView delegate:self];
+    
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:path]]];
     
     
@@ -95,10 +98,9 @@
     if (!_webView)
     {
         _webView = [[UIWebView alloc] init];
-        _webView.delegate = self;
         [self.view addSubview:_webView];
         _webView.frame = self.view.bounds;
-        _bridge = [SFWebViewBridge bridgeWithWebView:_webView delegate:self];
+        
     }
     return _webView;
 }
